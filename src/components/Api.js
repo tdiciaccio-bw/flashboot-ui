@@ -8,7 +8,7 @@ class Api {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		};
-		this.BASE_URL = 'https://master.dibdt4fs56nsw.amplifyapp.com/api';
+		this.BASE_URL = 'http://flashboot-env-01.eba-rdcykgng.us-east-1.elasticbeanstalk.com/api';
 	}
 
 	createHeaders() {
