@@ -8,7 +8,7 @@ class Api {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		};
-		this.BASE_URL = '/api';
+		this.BASE_URL = 'https://master.dibdt4fs56nsw.amplifyapp.com/api';
 	}
 
 	createHeaders() {
