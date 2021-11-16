@@ -8,7 +8,7 @@ class Api {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		};
-		this.BASE_URL = 'http://flashboot-env-01.eba-rdcykgng.us-east-1.elasticbeanstalk.com/api';
+		this.BASE_URL = 'https://boot.diciacc.io/api';
 	}
 
 	createHeaders() {
