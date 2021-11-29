@@ -63,8 +63,7 @@ const Lesson = () => {
 					lessonComplete: true,
 					scoredCardList: [...scoredCardList, scoredCard]
 				};
-			}); 
-			sendData();
+			});
 		}
 		if (currentCardIndex < indexLimit) {
 			setState(state => {
@@ -76,6 +75,12 @@ const Lesson = () => {
 			});
 		}
 	};
+	
+	useEffect(() => {
+		if (state.lessonComplete) {
+			sendData();
+		}
+	}, [state]);
   
 	const sendData = () => {
 		api.sendCompletedLesson(state.scoredCardList);
