@@ -47,7 +47,8 @@ const Decks = () => {
 						<Card key={deck.id}>
 							<Card.Content>
 								<Card.Header>{deck.name}</Card.Header>
-								<Card.Description>{deck.description}</Card.Description>
+								<Card.Meta>{deck.description}</Card.Meta>
+								<Card.Description>{deck.numberOfCards} Cards</Card.Description>
 							</Card.Content>
 							<Card.Content extra textAlign='center'>
 								<Button onClick={() => handleButtonClick(deck)}>
