@@ -8,7 +8,7 @@ class Api {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json'
 		};
-		this.BASE_URL = 'https://boot.diciacc.io/api';
+		this.BASE_URL = 'http://localhost:5000/api';
 	}
 
 	createHeaders() {

@@ -1,7 +1,7 @@
 import { useOktaAuth } from '@okta/okta-react';
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Card, Container, Dimmer, Loader } from 'semantic-ui-react';
+import { Button, Card, Container, Dimmer, List, Loader } from 'semantic-ui-react';
 import { DeckContext } from '../contexts/DeckContext';
 import Api from './Api';
 import NewDeckTile from './NewDeckTile';
@@ -42,13 +42,19 @@ const Decks = () => {
 			<h1>Decks Page</h1>
 			<h2>Current Deck: { deckContext ? deckContext.name : null}</h2>
 			<Card.Group>
-				{ decks.map((deck) => {
+				{ decks.map(({ deck, studiedCardCount, averageScore }) => {
 					return (
 						<Card key={deck.id}>
 							<Card.Content>
 								<Card.Header>{deck.name}</Card.Header>
 								<Card.Meta>{deck.description}</Card.Meta>
-								<Card.Description>{deck.numberOfCards} Cards</Card.Description>
+								<Card.Content>
+									<List>
+										<List.Item>{deck.numberOfCards} Total Cards</List.Item>
+										<List.Item>{studiedCardCount} Cards Studied So Far</List.Item>
+										<List.Item>Average Score: {averageScore}</List.Item>
+									</List>
+								</Card.Content>
 							</Card.Content>
 							<Card.Content extra textAlign='center'>
 								<Button onClick={() => handleButtonClick(deck)}>

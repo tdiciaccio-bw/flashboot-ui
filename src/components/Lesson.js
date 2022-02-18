@@ -83,6 +83,7 @@ const Lesson = () => {
 	}, [state]);
   
 	const sendData = () => {
+		console.log(JSON.stringify(state.scoredCardList));
 		api.sendCompletedLesson(state.scoredCardList);
 	};
 	

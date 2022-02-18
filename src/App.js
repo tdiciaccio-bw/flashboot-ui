@@ -13,7 +13,7 @@ import { UserContext } from './contexts/UserContext';
 
 const oktaAuth = new OktaAuth({
 	issuer: 'https://dev-74184285.okta.com/oauth2/default',
-	clientId: '0oa2452o4icgBgCMJ5d7',
+	clientId: '0oa2djdqnuk3u6VVb5d7',
 	redirectUri: window.location.origin + '/login/callback'
 });
 
